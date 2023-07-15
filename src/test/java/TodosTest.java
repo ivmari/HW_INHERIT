@@ -7,16 +7,16 @@ class TodosTest {
 
     @Test
     public void shouldAddThreeTasksOfDifferentType() {
-        SimpleTask simpleTask = new SimpleTask(5, "Позвонить в суд");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить в родителям");
 
-        String[] subtasks = { "Кефир", "Курица", "Хлеб" };
+        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
         Epic epic = new Epic(55, subtasks);
 
         Meeting meeting = new Meeting(
                 555,
-                "Исправление ошибок",
-                "Сайт Лабиринт",
-                "В 15:00 20 сентября"
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
         );
 
         Todos todos = new Todos();
@@ -32,16 +32,16 @@ class TodosTest {
 
     @Test
     public void testWhenSimpleFounded() {
-        SimpleTask simpleTask = new SimpleTask(5, "Позвонить в суд");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
-        String[] subtasks = { "Кефир", "Курица", "Хлеб" };
+        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
         Epic epic = new Epic(55, subtasks);
 
         Meeting meeting = new Meeting(
                 555,
-                "Исправление ошибок",
-                "Сайт Лабиринт",
-                "В 15:00 20 сентября"
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
         );
 
         Todos todos = new Todos();
@@ -59,14 +59,14 @@ class TodosTest {
     public void testWhenSearchEmpty() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
-        String[] subtasks = { "Кефир", "Курица", "Хлеб" };
+        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
         Epic epic = new Epic(55, subtasks);
 
         Meeting meeting = new Meeting(
                 555,
-                "Исправление ошибок",
-                "Сайт Лабиринт",
-                "В 15:00 20 сентября"
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
         );
 
         Todos todos = new Todos();

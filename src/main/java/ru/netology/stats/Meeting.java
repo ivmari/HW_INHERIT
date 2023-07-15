@@ -1,9 +1,9 @@
 package ru.netology.stats;
 
 public class Meeting extends Task {
-    private String[] topic;
-    private String[] project;
-    private String[] start;
+    private String topic;
+    private String project;
+    private String start;
 
     public Meeting(int id, String topic, String project, String start) {
         super(id);
@@ -12,15 +12,15 @@ public class Meeting extends Task {
         this.start = start;
     }
 
-    public String[] getTopic() {
+    public String getTopic() {
         return topic;
     }
 
-    public String[] getProject() {
+    public String getProject() {
         return project;
     }
 
-    public String[] getStart() {
+    public String getStart() {
         return start;
     }
 
