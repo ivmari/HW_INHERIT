@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.stats.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 class TodosTest {
 
     @Test
@@ -76,7 +74,7 @@ class TodosTest {
         todos.add(meeting);
 
         Task[] expected = {  };
-        Task[] actual = todos.search("Позвонить");
+        Task[] actual = todos.search("Играть");
         Assertions.assertArrayEquals(expected, actual);
     }
 }
