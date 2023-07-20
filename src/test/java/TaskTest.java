@@ -8,12 +8,22 @@ class TaskTest {
 
     @Test
     public void testWhenEpicTaskFound() {
-        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         boolean actual = epic.matches("Яйца");
         Assertions.assertTrue(actual);
     }
+
+    @Test
+    public void testWhenEpicTaskNotFound() {
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
+        Epic epic = new Epic(55, subtasks);
+
+        boolean actual = epic.matches("Курица");
+        Assertions.assertFalse(actual);
+    }
+
     @Test
     public void testWhenMeetingTaskFound() {
         Meeting meeting = new Meeting(
@@ -26,6 +36,20 @@ class TaskTest {
         boolean actual = meeting.matches("НетоБанк");
         Assertions.assertTrue(actual);
     }
+
+    @Test
+    public void testWhenMeetingTaskNotFound() {
+        Meeting meeting = new Meeting(
+                555,
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
+        );
+
+        boolean actual = meeting.matches("АльфаБанк");
+        Assertions.assertFalse(actual);
+    }
+
     @Test
     public void testWhenSimpleTaskFound() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
@@ -41,4 +65,5 @@ class TaskTest {
         boolean actual = simpleTask.matches("Позвонить");
         Assertions.assertFalse(actual);
     }
+
 }
